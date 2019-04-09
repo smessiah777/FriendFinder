@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-section {
+  background-image: url(../images/Reservoir_Dogs_wallpaper-by_scare_crow.jpg);
+  height: 100vh;
+  padding-top: 70px;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.splash-content {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.897);
+  font-size: 20px;
+  text-align: center;
+  width: 1200px;
+  height: 600px;
+  padding: 40px 20px 0 20px;
+  border: 2px solid white;
+}
+
+.splash-content > h1 {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 80px;
+  color: blanchedalmond;
+  text-align: center;
+}
+
+.splash-btn {
+  font-size: 20px;
+  margin-top: 100px;
+  background-color: red;
+}
+
+.splash-btn:hover {
+  background-color: black;
+}
