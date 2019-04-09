@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto");
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Luckiest Guy", cursive;
 }
 
 .main-section {
   background-image: url(../images/Reservoir_Dogs_wallpaper-by_scare_crow.jpg);
+  background-position-x: -100px;
   height: 100vh;
   padding-top: 70px;
-  padding-left: auto;
-  padding-right: auto;
 }
 
 .splash-content {
@@ -38,4 +37,42 @@ body {
 
 .splash-btn:hover {
   background-color: black;
+}
+
+.label-text {
+  color: red;
+  font-size: 40px;
+}
+
+.survey-section {
+  background-image: url(../images/Reservoir_Dogs_wallpaper-by_scare_crow.jpg);
+  background-position-x: -100px;
+  height: auto;
+  padding-top: 70px;
+}
+
+.survey-content {
+  font-family: "Luckiest Guy", cursive;
+  color: white;
+  background-color: black;
+  width: 100%;
+  height: auto;
+  padding: 50px;
+}
+
+.question {
+  color: red;
+}
+
+.survey-btn {
+  font-size: 20px;
+  letter-spacing: 10px;
+  background-color: red;
+  border: 1px solid red;
+}
+
+.survey-btn:hover {
+  color: red;
+  background-color: white;
+  border: 1px solid white;
 }
