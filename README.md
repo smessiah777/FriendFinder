@@ -2,7 +2,7 @@
 
 ## _A Reservoir Dogs themed friend finder_
 
-## _Answer the survey questions then see which Reservoir Dog you match up with in order to pull the perfect heist_
+## _Answer the survey questions then see which Reservoir Dog you match up with in order to pull off the perfect heist_
 
 Hiest Dog Splash Page:
 ![alt text](app/public/images/heist_dog-splash-page.png)
