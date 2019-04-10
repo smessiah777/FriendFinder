@@ -9,7 +9,7 @@ if (process.env.JAWSDB_URL) {
     port: 3306,
     user: "root",
     password: "root",
-    database: "dog"
+    database: "dog_db"
   });
 }
 
@@ -24,9 +24,19 @@ connection.connect(function(err) {
 
 //declare functions for querying the db and finding match
 
-module.exports = {
+module.exports = function(app) {
   //get route for all profiles
+  app.get("/api/profiles", function(req, res) {
+    connection.query("SELECT * FROM dog_profiles;", function(err, data) {
+      if (err) throw err;
+      console.log("current heist dogs:", data);
+
+      res.json(data);
+    });
+  });
   //post route to add new profiles
-  //when posting new user data, also use that data to find match
-  //split function score numbers
+  app.post("/api/profiles", function(req, res) {
+    //when posting new user data, also use that data to find match
+    //split function score numbers
+  });
 };

@@ -35,7 +35,7 @@
           <form>
             <div class="form-group">
               <label for="profile_name" class="label-text"
-                >Name(Required)</label
+                >Name (Required)</label
               >
               <input
                 type="name"
@@ -47,7 +47,7 @@
 
             <div class="form-group">
               <label for="profile_name" class="label-text"
-                >Profile Image(Required)</label
+                >Profile Image (Required)</label
               >
               <input
                 type="url"
@@ -74,7 +74,7 @@
                 You always put your trust in the guys in the group, during a
                 heist.
               </h4>
-              <select class="form-control" id="q1">
+              <select class="form-control" id="q2">
                 <option value="1">1(Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -85,7 +85,7 @@
             <div class="form-group">
               <h4 class="question">Question 3</h4>
               <h4>You play it close to the vest.</h4>
-              <select class="form-control" id="q1">
+              <select class="form-control" id="q3">
                 <option value="1">1(Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -98,7 +98,7 @@
               <h4>
                 Your willing to get needed information, by any means necessary.
               </h4>
-              <select class="form-control" id="q1">
+              <select class="form-control" id="q4">
                 <option value="1">1(Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -111,7 +111,7 @@
               <h4>
                 You always give your opinion no matter who likes it or not.
               </h4>
-              <select class="form-control" id="q1">
+              <select class="form-control" id="q5">
                 <option value="1">1(Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -124,7 +124,7 @@
               <h4>
                 You are willing to do jail time if it means not snitching.
               </h4>
-              <select class="form-control" id="q1">
+              <select class="form-control" id="q6">
                 <option value="1">1(Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -138,7 +138,7 @@
                 You play it cool, but if someone gets in your way...they better
                 move.
               </h4>
-              <select class="form-control" id="q1">
+              <select class="form-control" id="q7">
                 <option value="1">1(Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -149,7 +149,7 @@
             <div class="form-group">
               <h4 class="question">Question 8</h4>
               <h4>Your great at adapting to new situations.</h4>
-              <select class="form-control" id="q1">
+              <select class="form-control" id="q8">
                 <option value="1">1(Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -160,7 +160,7 @@
             <div class="form-group">
               <h4 class="question">Question 9</h4>
               <h4>You like to wisecrack to break ice and boost morale.</h4>
-              <select class="form-control" id="q1">
+              <select class="form-control" id="q9">
                 <option value="1">1(Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -171,7 +171,7 @@
             <div class="form-group">
               <h4 class="question">Question 10</h4>
               <h4>You love guns, knives, and ... Gasoline.</h4>
-              <select class="form-control" id="q1">
+              <select class="form-control" id="q10">
                 <option value="1">1(Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -179,12 +179,39 @@
                 <option value="5">5(Strongly Agree)</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary survey-btn">
+            <button
+              id="submit"
+              type="submit"
+              class="btn btn-primary survey-btn"
+            >
               Submit
             </button>
           </form>
         </div>
       </div>
     </section>
+
+    <script type="text/javascript">
+      $("#submit").on("click", function(event) {
+        event.preventDefault();
+
+        var userInput = {
+          name: $("#name").val(),
+          photo: $("#profile_img").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+          ]
+        };
+      });
+    </script>
   </body>
 </html>
